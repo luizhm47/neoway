@@ -4,6 +4,7 @@
 #REGISTRY       = your.url.registry
 REGISTRY_USER   = your_registry_user
 NAME            = players-app
+VERSION         = 0.1
 IMAGE           = $(REGISTRY_USER)/$(NAME):$(VERSION)
 
 image: guard-VERSION ## Build image
