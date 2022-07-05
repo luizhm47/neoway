@@ -11,6 +11,9 @@ IMAGE           = $(REGISTRY_USER)/$(NAME):$(VERSION)
 image: guard-VERSION ## Build image
 	docker build -t $(IMAGE) .
 
+login: guard-VERSION ## Publish image
+	docker login
+
 publish: guard-VERSION ## Publish image
 	docker push $(IMAGE)
 

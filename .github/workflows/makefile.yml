@@ -20,5 +20,8 @@ jobs:
     - name: Gera Imagem
       run: make image
       
+    - name: Login Docker Hub
+      run: make login
+
     - name: Publica Imagem
       run: make publish
