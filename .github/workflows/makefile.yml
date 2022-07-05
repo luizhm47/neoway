@@ -17,11 +17,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Install dependencies
-      run: make
+    - name: Gera Imagem
+      run: make image
       
-    - name: Run check
-      run: make check
-      
-    - name: Run distcheck
-      run: make distcheck
+    - name: Publica Imagem
+      run: make publish
