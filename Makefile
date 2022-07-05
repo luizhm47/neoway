@@ -2,9 +2,10 @@
 
 # if you want to use your own registry, change "REGISTRY" value
 #REGISTRY       = your.url.registry
-REGISTRY_USER   = your_registry_user
+#REGISTRY_USER   = your_registry_user
+REGISTRY_USER   = machadoluiz
 NAME            = players-app
-VERSION         = 0.1
+#VERSION         = 0.1
 IMAGE           = $(REGISTRY_USER)/$(NAME):$(VERSION)
 
 image: guard-VERSION ## Build image
