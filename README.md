@@ -38,7 +38,7 @@ make image VERSION=x.x.x
 make pubish VERSION=x.x.x
 ```
 
-### Run registry image locally
+### Run registry image on GCP
 
 ```bash
 make run-docker VERSION=x.x.x
