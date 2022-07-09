@@ -20,7 +20,8 @@ run: ## Run locally
 	go run .
 
 run-docker: guard-VERSION ## Run docker container
-	docker run --rm -d --name $(NAME) -d -p 5000:5000 $(REGISTRY_USER)/$(NAME):$(VERSION)
+	#docker run --rm -d --name $(NAME) -d -p 5000:5000 $(REGISTRY_USER)/$(NAME):$(VERSION)
+	gcloud run deploy $(NAME) --image $(REGISTRY_USER)/$(NAME):$(VERSION) --region us-south1 --memory 256Mi --max-instances 1 --port 5000 --allow-unauthenticated
 
 test:
 	go test -coverprofile=coverage.out ./...
