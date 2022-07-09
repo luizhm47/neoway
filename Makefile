@@ -1,17 +1,12 @@
 .PHONY: image publish run run-docker test
 
 # if you want to use your own registry, change "REGISTRY" value
-#REGISTRY       = your.url.registry
-#REGISTRY_USER   = your_registry_user
 REGISTRY_USER   = gcr.io/calcium-storm-355421/github.com/luizhm47
 NAME            = neoway
 IMAGE           = $(REGISTRY_USER)/$(NAME):$(VERSION)
 
 image: guard-VERSION ## Build image
 	docker build -t $(IMAGE) .
-
-login: guard-VERSION ## Publish image
-	docker login
 
 publish: guard-VERSION ## Publish image
 	docker push $(IMAGE)
