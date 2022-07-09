@@ -9,7 +9,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    environment: prd
     env:
       IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/players-app:latest
 
